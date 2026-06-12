@@ -1,6 +1,28 @@
-@import url(/frontend/styles/header.css);
-@import url(/frontend/styles/main.css);
-@import url(/frontend/styles/footer.css);
-@import url(/frontend/styles/hover.css);
-@import url(/frontend/styles/mobile.css);
-@import url(/frontend/styles/fonts/font.css);
+@import url("header.css");
+@import url("main.css");
+@import url("footer.css");
+@import url("hover.css");
+@import url("mobile.css");
+@import url("fonts/font.css");
+
+:root{
+	--green: #9dff3a;
+	--white: #e5e5e5;
+	--gray-1: #999;
+	--gray-2: #4d4d4d;
+	--gray-3: #2e2e2e;
+	--gray-4: #0f0f0f;
+	--black: #000;
+    --title-1: 64px;
+    --title-2: 48px;
+    --title-3: 40px;
+    --Subtitle: 20px;
+    --Button: 18px;
+    --text-1:16px;
+    --text-2: 14px;
+    --Caption: 12px;
+    
+}
+body{
+    font-family: 'Alexandria';
+}
