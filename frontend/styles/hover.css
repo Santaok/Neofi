@@ -1,0 +1,15 @@
+.header_hero_decentralised:hover{
+    transform: scale(0.9);
+}
+.header_hero_btn_watch:hover{
+    transform: scale(0.9);
+}
+.header_hero_btn_started:hover{
+    transform: scale(0.9);
+}
+.header_btn_nav_try:hover{
+    transform: scale(0.9);
+}
+.header_link_nav_items:hover{
+    color: var(--white);
+}
