@@ -25,4 +25,16 @@
 }
 body{
     font-family: 'Alexandria';
+    margin-left: 120px;
+    margin-right: 120px;
+}
+html{
+    background-color: var(--black);
+    color: var(--white);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
 }
