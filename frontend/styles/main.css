@@ -1,0 +1,53 @@
+.main__partners {
+    background-color: rgb(15, 16, 16);
+    display: flex;
+    margin-left: -120px;
+    margin-right: -120px;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    font-family: 'Alexandria';
+}
+
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main__partners__heading {
+    font-size: 18px;
+    font-weight: 500;
+    color: #b7b4b4;
+    letter-spacing: -0.3px;
+    margin-bottom: 48px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    row-gap: 32px;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+    gap: 15px;
+}
+
+.main__partners__logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-top: -8px;
+}
+
+
