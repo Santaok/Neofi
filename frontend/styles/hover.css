@@ -13,3 +13,6 @@
 .header_link_nav_items:hover{
     color: var(--white);
 }
+.feature:hover{
+   transform: scale(0.95);
+}
