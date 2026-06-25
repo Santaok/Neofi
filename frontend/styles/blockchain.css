@@ -8,6 +8,7 @@
    gap: 24px;
    width: 80%;
    transition: all ease-in-out 0.3s;
+
 }
 .blockchain__flex{
     display: flex;
