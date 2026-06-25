@@ -1,0 +1,56 @@
+.blockchain__card__item{
+    background-color: var(--gray-4);
+    border-radius: 20px;
+   border: 2px solid var(--gray-3);
+   display: flex;
+   align-items:flex-start;
+   padding: 20px 20px;
+   gap: 24px;
+   width: 80%;
+   transition: all ease-in-out 0.3s;
+}
+.blockchain__flex{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.blockchain__header{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin-bottom: 2vw;
+}
+.blockchain__subtitle{
+  font-size: var(--Button);
+  color: var(--gray-1);
+  text-align: center;
+    width:55%;
+    font-weight: 400;
+    
+}
+.blockchain__title{
+     color: var(--white);
+     font-size: var(--title-2);
+     margin: 0;
+     font-weight: 400;
+}
+.blockchain__badge{
+    color: var(--green);
+    border-radius: 24px;
+padding: 12px 20px;
+margin:0;
+    border: 2px solid var(--gray-3);
+}
+.blockchain__card__item__subtitle{
+    margin: 0;
+    color: var(--gray-1);
+}
+.blockchain__cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+.blockchain__card__item__title{
+    margin: 0;
+    margin-bottom: 10px;
+}

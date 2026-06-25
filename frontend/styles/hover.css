@@ -16,3 +16,6 @@
 .feature:hover{
    transform: scale(0.95);
 }
+.blockchain__card__item:hover{
+    transform: scale(0.95);
+}
