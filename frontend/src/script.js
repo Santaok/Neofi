@@ -30,3 +30,28 @@ items.forEach(item => {
   })
  })
 })
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.header_link_nav_items')
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault()
+            
+  const targetId = this.getAttribute('href')
+  const targetSection = document.querySelector(targetId)
+            
+            if (targetSection) {
+                
+  const offset = 5
+  const rect = targetSection.getBoundingClientRect()
+  const targetPosition = window.pageYOffset + rect.top - offset
+                
+                window.scrollTo({
+                    top: Math.max(0, targetPosition), 
+                    behavior: 'smooth'
+                })
+            }
+        })
+    })
+})
