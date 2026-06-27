@@ -55,3 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 })
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const rows = document.querySelectorAll('.testimonial-row-top, .testimonial-row-bottom');
+    
+    rows.forEach(row => {
+        const cards = row.querySelectorAll('.testimonial-card');
+        const totalWidth = cards.length * (320 + 24); // ширина карточки + gap
+        
+        // Дублируем карточки для создания эффекта бесконечности
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            row.appendChild(clone);
+        });
+    });
+});
