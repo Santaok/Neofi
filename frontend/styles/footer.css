@@ -15,6 +15,9 @@
     align-items: center;
 
 }
+.footer__links__item a {
+    color: var(--gray-1);
+}
 
 .footer__logo {
     display: flex;
