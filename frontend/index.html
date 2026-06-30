@@ -25,7 +25,7 @@
 
             </div>
             <div class="header_btn_nav">
-                <a class="header_btn_nav_log">Log in</a>
+                <a class="header_btn_nav_contact" href="#userEmail">Contact Us</a>
                 <a class="header_btn_nav_try">Try For Free</a>
 
             </div>
@@ -770,36 +770,33 @@
                 </div>
             </div>
 
-            <div class="footer_input__block">
+           <div class="footer__input__block">
+        <p class="footer__input__title">Join our mailing list for updates</p>
+        <form id="subscribeForm">
+            <input 
+                type="email" 
+                name="email" 
+                id="userEmail"
+                placeholder="Your email address" 
+                required 
+                class="footer__input"
+            />
+            <button type="submit" class="footer_input_btn" id="submitBtn">
+                Subscribe <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
 
-                <p class="footer__input__title">Join our mailing list for
-                    updates</p>
-
-                <form action="#">
-
-                    <input type="email" name="email" placeholder="Your email address" required class="footer__input">
-                    <button class="footer__input__btn">⭢</button>
-
-
-
-
-
-
-                </form>
-
+        <div id="statusMessage"></div>
+    </div>
 
             </div>
-
-
-
         </div>
 
 
-
-
-
-    </footer>
+    </footer> <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="src/script.js"></script>
+    <script src="/backend/email.js"></script>
 </body>
 
 </html>

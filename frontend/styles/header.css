@@ -22,8 +22,9 @@
     display: flex;
     align-items: center ;
 }
-.header_btn_nav_log{
+.header_btn_nav_contact{
     padding: 8px 24px;
+    color: var(--white);
 }
 .header_btn_nav_try{
 border-radius: 40px;
