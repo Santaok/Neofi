@@ -1,3 +1,9 @@
+import { initEmailJS, setupFormHandler,  } from './email.js';
+
+// Используем функции напрямую
+initEmailJS();
+setupFormHandler();
+
 document.addEventListener('DOMContentLoaded', function () {
 const items = document.querySelectorAll('.faq_cards_item')
 
@@ -74,21 +80,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function scrollToInput() {
-    const input = document.getElementById('userEmail');
-    
-    if (input) {
-        input.scrollIntoView({
-            behavior: 'smooth', // Плавная прокрутка
-            block: 'center',    // Центрируем элемент на экране
-            inline: 'nearest'
-        });
-        
-        // Опционально: фокусируемся на инпуте
-        setTimeout(() => {
-            input.focus();
-        }, 500); // Задержка после прокрутки
-    } else {
-        console.warn('❌ Элемент #userEmail не найден');
-    }
-}
