@@ -49,6 +49,7 @@
     border: none;
     padding: 22px;
     margin: 0;
+color: var(--white);
 
 }
 
@@ -72,3 +73,17 @@ form {
     cursor: pointer;
     white-space: nowrap;
 }
+
+        #statusMessage {
+            margin-top: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 24px;
+        }
+
+        .success {
+            color: #0f973d;
+        }
+        .error {
+            color: #d1453b;
+        }
