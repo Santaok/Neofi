@@ -5,13 +5,15 @@
         overflow-x: hidden;
     }
 
-    /* ===== НАВИГАЦИЯ ===== */
+    /* ===== НАВИГАЦИЯ + BURGER ===== */
     .header_nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 12px;
+        justify-content: space-between;
+        gap: 0;
         padding: 16px 0;
         width: 100%;
+        position: relative;
     }
 
     .header_logo_nav {
@@ -24,31 +26,90 @@
         height: 28px;
     }
 
-    .header_list_nav {
-        gap: 12px;
-        padding: 0;
-        flex-wrap: wrap;
-        justify-content: center;
+    /* Show burger button on mobile */
+    .burger_btn {
+        display: flex;
     }
 
-    .header_link_nav_items {
-        font-size: 13px;
-        padding: 4px 8px;
-    }
-
-    .header_btn_nav {
+    /* Hide menu by default on mobile; show as dropdown when open */
+    .header_menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
         gap: 8px;
-        flex-wrap: wrap;
-        justify-content: center;
+        background-color: var(--gray-4);
+        border: 1px solid var(--gray-2);
+        border-radius: 12px;
+        padding: 16px;
+        z-index: 1000;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .header_nav.menu-open .header_menu {
+        display: flex;
+    }
+
+    .header_link_nav {
         width: 100%;
     }
 
-    .header_btn_nav_log {
-        padding: 6px 16px;
-        font-size: 13px;
+    .header_list_nav {
+        flex-direction: column;
+        gap: 4px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header_list_nav li {
+        width: 100%;
+    }
+
+    .header_link_nav_items {
+        display: block;
+        font-size: 16px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        color: var(--white);
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .header_link_nav_items:hover,
+    .header_link_nav_items:active {
+        background-color: var(--gray-3);
+        color: var(--green);
+    }
+
+    .header_btn_nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .header_btn_nav_contact {
+        display: block;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--gray-2);
+        color: var(--white);
     }
 
     .header_btn_nav_try {
+        display: block;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+
+    .header_btn_nav_log {
         padding: 6px 16px;
         font-size: 13px;
     }

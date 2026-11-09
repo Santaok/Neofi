@@ -86,25 +86,81 @@ items.forEach(item => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.header_link_nav_items')
+    const burgerBtn = document.querySelector('.burger_btn')
+    const headerNav = document.querySelector('.header_nav')
+
+    // Burger menu toggle
+    if (burgerBtn && headerNav) {
+        burgerBtn.addEventListener('click', function() {
+            const isOpen = headerNav.classList.toggle('menu-open')
+            burgerBtn.classList.toggle('active', isOpen)
+            burgerBtn.setAttribute('aria-expanded', isOpen)
+        })
+    }
+
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault()
-            
-  const targetId = this.getAttribute('href')
-  const targetSection = document.querySelector(targetId)
-            
+
+            // Close mobile menu after clicking a link
+            if (headerNav && headerNav.classList.contains('menu-open')) {
+                headerNav.classList.remove('menu-open')
+                if (burgerBtn) {
+                    burgerBtn.classList.remove('active')
+                    burgerBtn.setAttribute('aria-expanded', 'false')
+                }
+            }
+
+            const targetId = this.getAttribute('href')
+            const targetSection = document.querySelector(targetId)
+
             if (targetSection) {
-                
-  const offset = 5
-  const rect = targetSection.getBoundingClientRect()
-  const targetPosition = window.pageYOffset + rect.top - offset
-                
+                const offset = 5
+                const rect = targetSection.getBoundingClientRect()
+                const targetPosition = window.pageYOffset + rect.top - offset
+
                 window.scrollTo({
-                    top: Math.max(0, targetPosition), 
+                    top: Math.max(0, targetPosition),
                     behavior: 'smooth'
                 })
             }
         })
+    })
+
+    // Close menu when clicking Contact Us / Try For Free in mobile menu
+    document.querySelectorAll('.header_btn_nav_contact, .header_btn_nav_try').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (headerNav && headerNav.classList.contains('menu-open')) {
+                headerNav.classList.remove('menu-open')
+                if (burgerBtn) {
+                    burgerBtn.classList.remove('active')
+                    burgerBtn.setAttribute('aria-expanded', 'false')
+                }
+            }
+        })
+    })
+
+    // Close menu on outside click
+    document.addEventListener('click', function(event) {
+        if (!headerNav || !headerNav.classList.contains('menu-open')) return
+        if (!headerNav.contains(event.target)) {
+            headerNav.classList.remove('menu-open')
+            if (burgerBtn) {
+                burgerBtn.classList.remove('active')
+                burgerBtn.setAttribute('aria-expanded', 'false')
+            }
+        }
+    })
+
+    // Close menu on Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && headerNav && headerNav.classList.contains('menu-open')) {
+            headerNav.classList.remove('menu-open')
+            if (burgerBtn) {
+                burgerBtn.classList.remove('active')
+                burgerBtn.setAttribute('aria-expanded', 'false')
+            }
+        }
     })
 })
 

@@ -1,8 +1,17 @@
 .header_nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: var(--white);
+    position: relative;
 }
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .header_list_nav{
     display: flex;
     gap: 40px;
@@ -32,6 +41,42 @@ padding: 8px 24px;
 background-color: var(--green);
 color: var(--black);
 transition: all ease-in-out 0.3s;
+}
+
+/* Burger button — hidden on desktop */
+.burger_btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger_line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active state: transform into X */
+.burger_btn.active .burger_line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger_btn.active .burger_line:nth-child(2) {
+    opacity: 0;
+}
+.burger_btn.active .burger_line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 .header_hero{
     margin-top: 60px;
